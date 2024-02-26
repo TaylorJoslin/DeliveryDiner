@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ItemTag;
 using UnityEngine;
 
 public class objectHold : MonoBehaviour
@@ -27,6 +28,11 @@ public class objectHold : MonoBehaviour
             carriedObject.GetComponent<Rigidbody>().isKinematic = true;
             carriedObject.transform.SetParent(playerTransform);
             //carriedObject.transform.localPosition = Vector3.zero;
+        }
+
+        if (other.CompareTag("Pickupable"))
+        {
+            //other.GetComponent<Item>().ToString();
         }
     }
 
