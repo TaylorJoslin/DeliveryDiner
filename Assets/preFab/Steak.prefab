@@ -348,7 +348,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6510922987741034275
 Rigidbody:
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3398681406314434948}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dff7d6f6d862bf45875ced8c8aba69b, type: 3}
   m_Name: 
@@ -424,7 +424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a3a1b42778c5a42a8139e6bcc6b97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Steak
+  triggerLayer: Cookable
+  newMaterial: {fileID: 2100000, guid: 0ce3166aedbcabb46af476322b4f009e, type: 2}
   nameText: {fileID: 4691651762630690912}
 --- !u!1 &7763301472440865515
 GameObject:

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class objectHold : MonoBehaviour
 {
+    public bool Carrying { get { return isCarrying; } } 
+
     private bool isCarrying = false;
     [SerializeField] private GameObject carriedObject;
     [SerializeField] private Transform playerTransform;
@@ -20,14 +22,14 @@ public class objectHold : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        //pick up object if it is pickupabl and player isn't holding anything
+        //pick up object if it is pickupable and player isn't holding anything
         if (Input.GetMouseButton(0) && other.CompareTag("Pickupable") && !isCarrying)
         {
             carriedObject = other.gameObject;
             isCarrying = true;
             carriedObject.GetComponent<Rigidbody>().isKinematic = true;
             carriedObject.transform.SetParent(playerTransform);
-            //carriedObject.transform.localPosition = Vector3.zero;
+            
         }
 
         if (other.CompareTag("Pickupable"))
@@ -56,8 +58,5 @@ public class objectHold : MonoBehaviour
         }
     }
 
-    public bool GetIsCarrying()
-    {
-        return isCarrying;
-    }
+    
 }
