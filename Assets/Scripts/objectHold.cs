@@ -55,4 +55,9 @@ public class objectHold : MonoBehaviour
             carriedObject = null;
         }
     }
+
+    public bool GetIsCarrying()
+    {
+        return isCarrying;
+    }
 }
